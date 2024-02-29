@@ -1,0 +1,740 @@
+@charset "utf-8";
+
+:root {
+    --header-height: 100;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* 로그인 */
+.HYUN.login_frame {
+    height: 100vh;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.HYUN.login_frame>* {
+    flex: 1;
+}
+
+.HYUN.login_frame .img img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.HYUN.login_frame .login_contents .inner {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.HYUN.login_frame .login_contents .box1 {
+    font-size: 20px;
+    margin-bottom: 3em;
+}
+
+.HYUN.login_frame .login_contents .box1>li {
+    display: flex;
+    align-items: center;
+    gap: 1em
+}
+
+.HYUN.login_frame .login_contents .box1>li:not(:last-child) {
+    margin-bottom: 0.3em;
+}
+
+.HYUN.login_frame .login_contents .box1>li label {
+    width: 5em;
+    text-align: right;
+}
+
+.HYUN.login_frame .login_contents .box1>li input {
+    border: 2px solid #000;
+    font-size: inherit;
+    padding: 0.2em;
+    border-radius: 0.3em;
+    flex: 1;
+}
+
+.HYUN.login_frame .login_contents .btn_v1 {
+    display: flex;
+    font-size: 22px;
+    gap: 0.5em
+}
+
+.HYUN.login_frame .login_contents .btn_v1 .link {
+    flex: 1;
+    text-align: center;
+    padding: 0.6em 0 0.8em;
+    background: var(--main-color);
+    border-radius: 0.3em;
+    font-weight: 500;
+    color: #fff;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/* 회원가입 */
+.HYUN.register_frame h1 {
+    text-align: center;
+    font-size: 32px;
+    padding: 1em 0 0;
+}
+
+.HYUN.register_frame .select_container {
+    position: relative;
+    flex: 1;
+}
+
+.HYUN.register_frame .select_v1 {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0.8em 1.4em 0.8em 0.8em;
+    /* 화살표 공간을 위해 오른쪽 패딩 조정 */
+    border: 2px solid #000;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    font-weight: 500;
+    font-family: 'Noto Sans KR', sans-serif !important;
+    letter-spacing: 0.2em;
+}
+
+.HYUN.register_frame .select_container::after {
+    content: '▼';
+    position: absolute;
+    right: 15px;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-size: 0.8em;
+}
+
+.HYUN.register_frame .select_v1 option {
+    background: white;
+    color: black;
+}
+
+.HYUN.register_frame input:read-only {
+    background: #eee;
+}
+
+.HYUN.register_frame .tab-menu {
+    text-align: center;
+    transform: translateY(50%);
+}
+
+.HYUN.register_frame .tab-menu button {
+    border: 6px solid var(--main-color);
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0.6em 1.6em;
+    background: #fff;
+}
+
+.HYUN.register_frame .tab-menu button:first-child {
+    border-right: none;
+}
+
+.HYUN.register_frame .tab-menu button.active {
+    background: var(--main-color);
+    color: #fff;
+}
+
+.HYUN.register_frame .tab-content {
+    border: 8px solid var(--main-color);
+    height: 80vh;
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.HYUN.register_frame .tab-content .field_box {
+    font-size: 20px;
+    max-width: 580px;
+    margin: 4em auto 0;
+}
+
+.HYUN.register_frame .tab-content .field_box>li {
+    display: flex;
+    align-items: center;
+    gap: 1em
+}
+
+.HYUN.register_frame .tab-content .field_box>li:not(:last-child) {
+    margin-bottom: 1.3em;
+}
+
+.HYUN.register_frame .tab-content .field_box>li label {
+    width: 8em;
+    font-weight: 500;
+}
+
+.HYUN.register_frame .tab-content .field_box>li input {
+    border: 2px solid #000;
+    font-size: inherit;
+    padding: 0.4em 0.8em;
+    border-radius: 0.3em;
+    flex: 1;
+    width: 100%;
+}
+
+.HYUN.register_frame .tab-content .field_box>li .check_user {
+    background: var(--main-color);
+    padding: 0.6em 1em;
+    border-radius: 0.3em;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.HYUN.register_frame .tab-content .field_box>li .pwcheckBox {
+    flex: 1;
+}
+
+.HYUN.register_frame .password-validation-message {
+    font-size: 0.9em;
+    margin-top: 0.5em;
+    font-weight: bold;
+}
+
+.HYUN.register_frame .password-validation-message.warning {
+    color: #ff0000;
+}
+
+.HYUN.register_frame .password-validation-message.match {
+    color: rgb(0, 201, 0);
+}
+
+.HYUN.register_frame .tab-content .btn_v1 {
+    display: flex;
+    font-size: 22px;
+    gap: 0.5em;
+    width: 100%;
+    max-width: 580px;
+    margin: 0 auto 1.5em;
+}
+
+.HYUN.register_frame .tab-content .btn_v1 .link {
+    flex: 1;
+    text-align: center;
+    padding: 0.6em 0;
+    background: var(--main-color);
+    border-radius: 0.3em;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 1.4;
+    color: #fff;
+}
+
+
+/* 메인페이지 해드 스타일 */
+#head_2n {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2000;
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    height: calc(var(--header-height) * 1px);
+}
+
+#head_2n .logo_2n {
+    max-width: 130px;
+    margin-left: max(15px, calc(50 / 1920 * 100vw));
+}
+
+#head_2n .linkBox {
+    font-size: 25px;
+    display: flex;
+    height: 100%;
+}
+
+#head_2n .linkBox .link {
+    color: #fff;
+    display: grid;
+    width: 10em;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+#head_2n .linkBox>li.shincheong>.link {
+    background: var(--main-color);
+}
+
+@media (max-width:1024px) {
+    #head_2n {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        justify-content: initial;
+    }
+
+    #head_2n .linkBox>li {
+        flex: 1;
+    }
+
+    #head_2n .linkBox>li>a {
+        width: 100%;
+    }
+}
+
+@media (max-width:768px) {
+    #head_2n .linkBox {
+        font-size: max(12px, calc(25 / 768 * 100vw));
+    }
+}
+
+@media (max-width:580px) {
+    #head_2n {
+        height: 70px;
+    }
+}
+
+
+/* 메인페이지 스타일 */
+#index_2n {
+    font-size: min(calc(10 / 480 * 100vw), 10px);
+    overflow: hidden;
+}
+
+#index_2n .section1 {
+    padding: 20em 0 8em;
+}
+
+#index_2n .section1 .titleBox {
+    text-align: center;
+    margin-bottom: 5.5em;
+}
+
+#index_2n .section1 .titleBox .title-v1 {
+    font-size: 5em;
+    line-height: 1.4;
+    font-weight: bold;
+    padding-bottom: 0.5em;
+}
+
+#index_2n .section1 .titleBox .title-v1 .txt1 {
+    text-transform: uppercase;
+}
+
+#index_2n .section1 .titleBox .text-v1 {
+    font-size: 1.8em;
+    color: #434343;
+    line-height: 1.6;
+    padding-bottom: 1.8em;
+}
+
+#index_2n .section1 .titleBox .line {
+    width: 18.5em;
+    height: 4px;
+    margin: 0 auto;
+    background: var(--main-color);
+}
+
+@media (max-width:768px) {
+    #index_2n .section1 .titleBox .title-v1 {
+        font-size: 4em;
+    }
+
+    #index_2n .section1 .titleBox .title-v1 br {
+        display: none;
+    }
+}
+
+#index_2n .section6 {
+    padding: 12em 0 9em;
+    background: url('../public/img/index2n_section6_img.jpg') no-repeat center / cover;
+    min-height: 100vh;
+}
+
+#index_2n .section6 .titleBox {
+    text-align: center;
+    margin-bottom: 8em;
+    color: #fff;
+}
+
+#index_2n .section6 .titleBox .text-v2 {
+    font-size: 3em;
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+#index_2n .section6 .titleBox .text-v2 .txt1 {
+    text-transform: uppercase;
+}
+
+#index_2n .section6 .titleBox .title-v1 {
+    font-size: 5.5em;
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+@media (max-width:768px) {
+    #index_2n .section6 .titleBox .title-v1 {
+        font-size: 4em;
+    }
+}
+
+
+
+/* 접수신청 */
+#formBox {
+    --index-font-size-pc: 10;
+    --index-font-size-mob: 10;
+    font-size: min(calc(var(--index-font-size-mob) / 480 * 100vw), calc(var(--index-font-size-pc) * 1px));
+}
+
+#formBox :is(input, textarea)::placeholder {
+    color: #000;
+}
+
+#formBox label {
+    margin: 0;
+}
+
+#formBox>.itemBox {
+    display: grid;
+    gap: 3em 0;
+    max-width: 880px;
+    margin: 0 auto;
+    margin-bottom: 2em;
+}
+
+#formBox .tab_wrap {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+#formBox .tab-container {
+    display: flex;
+    width: 100%;
+    border-top: 1px solid var(--main-color);
+}
+
+#formBox .tab {
+    flex: 1;
+    border-right: 1px solid var(--main-color);
+    text-align: center;
+}
+
+#formBox .tab:last-child {
+    border-right: none;
+}
+
+#formBox .tab input[type="radio"] {
+    display: none;
+}
+
+#formBox .tab label {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    padding: 1em 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    background: #fff;
+    color: #000;
+}
+
+#formBox .tab input[type="radio"]:checked+label {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+#formBox .company-address {
+    background: #fff;
+}
+
+#formBox>.itemBox>li {
+    display: grid;
+    gap:10px;
+    align-items: center;
+}
+
+#formBox>.itemBox>li .title_v1 {
+    color: #fff;
+    font-size: 2em;
+    width: 6em;
+    font-weight: bold;
+}
+
+#formBox>.itemBox .two-input {
+    display: grid;
+    gap:10px;
+}
+
+#formBox .inputType1 {
+    flex: 1;
+    background: rgba(255, 255, 255, 85%);
+    padding: 1em;
+    font-size: 1.8em;
+    font-weight: 400;
+    color: #000;
+    border-radius: 0.7em;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+#formBox .file_wrap {
+    flex: 1;
+    background: rgba(255, 255, 255, 85%);
+    padding: 1em;
+    font-size: 1.8em;
+    font-weight: 400;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    color: #000;
+    border-radius: 0.7em;
+}
+
+#formBox textarea.inputType1 {
+    line-height: 1.4;
+    height: 200px;
+}
+
+#formBox>.agreeAndSubmit {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px 0;
+    align-items: center;
+}
+
+#formBox>.agreeAndSubmit>li:first-child {
+    display: flex;
+}
+
+#formBox>.agreeAndSubmit>li:last-child {
+    display: flex;
+    justify-content: end;
+}
+
+#formBox .submitType1 {
+    background: var(--main-color);
+    width: 100%;
+    max-width: 880px;
+    padding: 17px;
+    font-size: 1.8em;
+    margin: 2em auto 0;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 0.7em;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width:1200px) {
+    #formBox>.itemBox {
+        transform: translateX(0);
+    }
+
+    #formBox .submitType1 {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width:768px) {
+    #formBox>.itemBox>li {
+        display: grid !important;
+        gap: 1.5em !important;
+    }
+
+    #formBox>.itemBox>li label {
+        width: auto;
+        text-align: left;
+    }
+}
+
+
+/* 서브 타이틀 */
+
+/* 애니메이션 */
+@keyframes title_sub_ani_bg {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        background: #000;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(40);
+        background: #fff;
+    }
+}
+
+@keyframes title_sub_ani_title {
+    to {
+        transform: translateY(-30%);
+        opacity: 1;
+        color: #000;
+    }
+}
+
+@keyframes title_sub_ani_scroll {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.tmt_sub_frame>.containerV1 {
+    max-width: 100%;
+    padding: 0;
+}
+
+#title_sub {
+    --sub-font-size-pc: 60;
+    --sub-font-size-mob: 40;
+    font-size: min(calc(var(--sub-font-size-mob) / 350 * 100vw), calc(var(--sub-font-size-pc) * 1px));
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+#title_sub .bg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background: #000;
+    border-radius: 50%;
+    animation: title_sub_ani_bg 1.5s ease forwards;
+}
+
+#title_sub .title {
+    position: relative;
+    z-index: 1;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(100%);
+    animation: title_sub_ani_title 1.5s ease forwards;
+    text-align: center;
+    line-height: 1.4;
+}
+
+#title_sub .scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 1em;
+    transform: translateX(-50%);
+    height: 1em;
+    width: 2px;
+    background: rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: 1s;
+    z-index: 1;
+}
+
+#title_sub .scroll>span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(-100%);
+    width: 100%;
+    height: 100%;
+    background: #000;
+    animation: title_sub_ani_scroll 2.5s ease infinite;
+}
+
+/* 스크롤 했을 때 */
+#title_sub.on .scroll {
+    opacity: 0;
+}
+
+
+
+
+
+
+/* 배당자 계정 접수 게시판 */
+.HYUN.lv3_page {
+    margin-top: calc(var(--header-height) * 1px);
+    margin-bottom: 80px;
+}
+
+/* 배당자 계정 접수 게시판 디테일 화면 */
+.HYUN.Detail {
+    margin-top: calc(var(--header-height) * 1px);
+    margin-bottom: 80px;
+}
+.HYUN.Detail .detail_wrap {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap:30px;
+    /* max-width: 1024px; margin: 0 auto; */
+}
+.HYUN.Detail .detail_wrap > * {
+    flex:1;
+}
+.HYUN.Detail .detail_wrap .map_wrap {
+    border: 1px solid #ccc;
+}
+.HYUN.Detail .detail_wrap .info_wrap {
+    border: 1px solid #ccc; padding: 2em;
+    font-size: 18px; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+}
+.HYUN.Detail .detail_wrap .info_wrap .textBox:not(:last-child) {
+    margin-bottom: 1.4em;
+}
+.HYUN.Detail .detail_wrap .info_wrap .textBox > * {
+    display: block;
+}
+.HYUN.Detail .detail_wrap .info_wrap .title_v1 {
+    font-size: 1.1em; line-height: 1.4;
+    margin-bottom: 2em;
+}
+.HYUN.Detail .detail_wrap .info_wrap .textBox .text1 {
+    text-transform: capitalize; font-weight: 500;
+    line-height: 1.4;
+}
+.HYUN.Detail .detail_wrap .info_wrap .textBox .text2 {
+    font-size: 0.9em; line-height: 1.6;
+}
+
+@media (max-width:991px){
+    .HYUN.Detail .detail_wrap {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 작업배당 신청폼 */
+.HYUN.Detail .dividend_box {
+    border: 1px solid #ccc; padding: 2em;
+    font-size: 18px; margin-top: 30px;
+}
+
+
+.lv2_page {
+    margin-top: calc(var(--header-height) * 1px);
+    margin-bottom: 80px;
+}

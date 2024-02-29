@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+
+
+/* 리스트 스타일 */
+.list-item { position: relative; }
+.list-item .date_btn {
+    position: absolute; left: 0; top: 0;
+    width: 100%; height: 100%;
+    transition: 0.3s;
+}
+.list-item .date_btn_text {
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    display: flex; justify-content: center;
+    align-items: center; font-size: 25px;
+    color: #fff;
+    font-weight: bold;
+}
+.list-item .date_ui {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height : auto; /* 높이를 auto로 조정 */
+    z-index: 10; /* z-index를 적절히 조정 */
+    display: none; /* 기본적으로 숨김 */
+    text-align: center;
+}
+
+.list-item .date_ui.open {
+    display: block; /* 활성화시 보임 */
+}
+.list-item:hover .date_btn {
+    background: rgba(0,0,0,0.5);
+    border-radius: 20px;
+}
+.list-item:hover .date_btn_text{
+    opacity: 1;
+}
+.list-item .post-image {
+    border-radius: 20px; overflow: hidden;
+    height: 200px;
+}
+.list-item .post-image .img {
+    transition: 0.4s; background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 100%;
+}
+.list-item .post-image:hover .img {
+    transform: scale(1.03);
+}
+.list-item .post-inner {
+    padding: 10px;
+}
+.list-item .line1 {
+    display: flex; font-size: 11px; gap:0.5em;
+    align-items:center; margin:0.5em 0 1.8em; padding: 0 0.5em;
+}
+.list-item .line1 .item-v1 {
+    padding: 0.35em 0.8em 0.45em; background: #ddd; border-radius: 0.5em;
+}
+.list-item .line1 .blog {
+    background: var(--main-color); color: #fff;
+}
+
+.list-item .titleBox {
+    margin-bottom: 20px; border-bottom: 1px solid #707070;
+    padding-bottom: 20px;
+}
+.list-item .titleBox .post-subject { 
+    font-size:16px; font-weight: 500;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    height: 3em !important; line-height: 1.5;
+    margin-bottom: 0.8em;
+}
+.list-item .titleBox .sub {
+    font-size: 14px; color: #999; font-weight: 500;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    height: 3em; line-height: 1.5;
+}
+.list-item .line3 {
+    font-size: 12px; font-weight: normal; 
+    display: flex; justify-content: space-between;
+}
+.list-item .line3 .item-v1 {
+    display: flex; gap:0.3em; color: #999;
+    width: 100%; flex-wrap: wrap;
+}
+.list-item .line3 .current { 
+    font-weight: bold; color: #000;
+}
+.list-item .line3 .total { font-weight: 500; }
+.list-item .line3 .status {
+    font-size: 13px; font-weight: bold;
+    height: 2.1em; text-align: right; padding-top: 1em;
+    width: 100%;
+}
+.list-item .line3 .status .color1 { 
+    color: var(--main-color); font-size: 1.1em;
+}
+
+/* latest */
+.widget_kaempein {
+    display: grid; grid-template-columns: repeat(5,1fr); gap:30px 15px;
+}
+.widget_kaempein .post-row {
+    overflow: hidden;
+}
+@media (max-width:1400px) {
+    .widget_kaempein {
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+@media (max-width:991px) {
+    .widget_kaempein {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media (max-width:580px) {
+    .widget_kaempein {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width:768px) {
+    .list-item .post-image {
+        border-radius: 5px;
+    }
+	.list-item .post-inner { padding: 10px 5px; }
+	.list-item .line1 { padding: 0; }
+	.list-item .titleBox .post-subject {
+		font-size: 15px; -webkit-line-clamp: 1; height: 1.5em !important;
+		margin-bottom: 0.2em;
+	}
+	.list-item .titleBox .sub {
+		font-size: 13px; -webkit-line-clamp: 1; height: 1.5em !important;
+	}
+	.list-item .line3 {
+		display:grid; justify-content:initial; box-shadow:0 0 5px rgba(0,0,0,0.15);
+		padding: 0.9em; gap:0.8em; border-radius: 5px;
+	}
+	.list-item .line3 .item-v1 {
+		justify-content:space-around;
+	}
+	.list-item .line3 .status {
+		font-size: 11px; margin-left: 0; justify-self:center;
+		height: auto;
+	}
+	.list-item .line3 .status .color1 { font-size: 12px; }
+}
